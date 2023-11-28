@@ -1,0 +1,13 @@
+.hrStyle {
+  border: none;
+  height: 1px;
+  background-color: #000;
+}
+
+.textStyle {
+  font-weight: bold;
+}
+
+.informationView {
+  width: 100%;
+}

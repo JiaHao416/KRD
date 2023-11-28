@@ -1,9 +1,8 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 
 function Layout(props) {
-  function Header() {}
-
   return (
     <div
       style={{
@@ -11,13 +10,14 @@ function Layout(props) {
         flexDirection: "column",
         backgroundColor: "white",
         alignItems: "center",
-        justifyContent: "space-between",
         minHeight: "100vh",
         width: "100%",
         position: "relative",
       }}
     >
       <NavBar />
+      <div className="content">{props.children}</div>
+      <Footer />
     </div>
   );
 }
