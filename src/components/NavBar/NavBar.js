@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Form,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Offcanvas,
+} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import css from "./navbar.module.css";
 
@@ -18,7 +26,7 @@ function NavBar() {
 
   return (
     <>
-      <Navbar expand="xl" className="bg-body-tertiary w-100" sticky>
+      <Navbar expand="xl" className={`${css.navBarView} w-100`} sticky>
         <Container fluid>
           <Navbar.Brand
             onClick={() => {
@@ -33,26 +41,40 @@ function NavBar() {
               alt="logo"
             />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className={css.navCollapse}>
-            <Nav className="me-auto">
-              {navItems.map((item, index) => (
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
+          <Navbar.Offcanvas
+            id={`offcanvasNavbar-expand`}
+            aria-labelledby={`offcanvasNavbarLabel-expand`}
+            placement="start"
+          >
+            <Offcanvas.Body>
+              <Nav className="justify-content-start flex-grow-1 pe-3">
+                {navItems.map((item, index) => (
+                  <Nav.Link
+                    key={index}
+                    className={`${css.navLink} d-flex justify-content-center`}
+                    onClick={() => {
+                      navigate(item.path);
+                    }}
+                  >
+                    {item.text}
+                  </Nav.Link>
+                ))}
+              </Nav>
+              <Nav>
                 <Nav.Link
-                  key={index}
-                  className={css.navLink}
-                  onClick={() => {
-                    navigate(item.path);
-                  }}
+                  className={`${css.navLink} d-flex justify-content-center`}
                 >
-                  {item.text}
+                  商店介紹
                 </Nav.Link>
-              ))}
-            </Nav>
-            <Nav>
-              <Nav.Link href="#deets">商店介紹</Nav.Link>
-              <Nav.Link href="#memes">聯絡我們</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+                <Nav.Link
+                  className={`${css.navLink} d-flex justify-content-center`}
+                >
+                  聯絡我們
+                </Nav.Link>
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
         </Container>
       </Navbar>
     </>
