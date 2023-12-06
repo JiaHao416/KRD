@@ -52,7 +52,7 @@ function NavBar() {
                 {navItems.map((item, index) => (
                   <Nav.Link
                     key={index}
-                    className={`${css.navLink} d-flex justify-content-center`}
+                    className={`d-flex justify-content-center`}
                     onClick={() => {
                       navigate(item.path);
                     }}
@@ -61,15 +61,11 @@ function NavBar() {
                   </Nav.Link>
                 ))}
               </Nav>
-              <Nav>
-                <Nav.Link
-                  className={`${css.navLink} d-flex justify-content-center`}
-                >
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link className={`d-flex justify-content-center`}>
                   商店介紹
                 </Nav.Link>
-                <Nav.Link
-                  className={`${css.navLink} d-flex justify-content-center`}
-                >
+                <Nav.Link className={`d-flex justify-content-center`}>
                   聯絡我們
                 </Nav.Link>
               </Nav>
