@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Container,
@@ -10,19 +10,21 @@ import {
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import css from "./navbar.module.css";
+import { airTable } from "../../services/AirTable";
 
 function NavBar() {
   const navigate = useNavigate();
-  const navItems = [
-    { text: "所有商品", path: "/all-products" },
-    { text: "最新商品", path: "/new-products" },
-    { text: "MICGO", path: "/micgo-products" },
-    { text: "KRD", path: "/krd-products" },
-    { text: "有線麥克風", path: "/wired-micphone" },
-    { text: "無線麥克風", path: "/wireless-micphone" },
-    { text: "喇叭", path: "/trumpet" },
-    { text: "配件", path: "/accessories" },
-  ];
+  const [navigationData, setNavigationData] = useState([]);
+
+  useEffect(() => {
+    async function getNavigation() {
+      const response = await airTable("導覽列", "data");
+      console.log("navigationData", response);
+      setNavigationData(response);
+    }
+
+    getNavigation();
+  }, []);
 
   return (
     <>
@@ -49,15 +51,15 @@ function NavBar() {
           >
             <Offcanvas.Body>
               <Nav className="justify-content-start flex-grow-1 pe-3">
-                {navItems.map((item, index) => (
+                {navigationData.map((item, index) => (
                   <Nav.Link
                     key={index}
                     className={`d-flex justify-content-center`}
                     onClick={() => {
-                      navigate(item.path);
+                      navigate(item.fields.path);
                     }}
                   >
-                    {item.text}
+                    {item.fields.title}
                   </Nav.Link>
                 ))}
               </Nav>
