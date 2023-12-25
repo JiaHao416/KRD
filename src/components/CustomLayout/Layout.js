@@ -16,7 +16,9 @@ function Layout(props) {
       }}
     >
       <NavBar />
-      <div className="content">{props.children}</div>
+      <div className="h-100 w-100 d-flex row justify-content-center">
+        {props.children}
+      </div>
       <Footer />
     </div>
   );
