@@ -1,0 +1,83 @@
+.card {
+  border-radius: 20px;
+}
+
+.cardImg {
+  object-fit: scale-down;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.productContainer {
+  width: 100%;
+}
+
+.productTitle {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1400px) {
+  .productContainer {
+    margin-top: 50px;
+  }
+
+  .cardText {
+    font-size: 18px;
+  }
+}
+
+/* for screens between 1201px and 1400px */
+@media screen and (min-width: 1201px) and (max-width: 1399px) {
+  .productContainer {
+    margin-top: 50px;
+  }
+
+  .cardText {
+    font-size: 18px;
+  }
+}
+
+/* for screens between 993px and 1199px */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .productContainer {
+    margin-top: 50px;
+  }
+
+  .cardText {
+    font-size: 18px;
+  }
+}
+
+/* for screens between 769px and 992px */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .productTitle {
+    text-align: center;
+  }
+
+  .cardText {
+    font-size: 18px;
+  }
+}
+
+/* for screens between 576px and 768px */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .productTitle {
+    text-align: center;
+  }
+
+  .cardText {
+    font-size: 18px;
+  }
+}
+
+/* for screens smaller than 576px */
+@media screen and (max-width: 575px) {
+  .productTitle {
+    text-align: center;
+  }
+
+  .cardText {
+    font-size: 10px;
+  }
+}
