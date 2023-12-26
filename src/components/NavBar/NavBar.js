@@ -34,11 +34,13 @@ function NavBar() {
             }}
           >
             {logo !== "" && (
-              <img
-                src={logo}
-                className={`${css.logoView} d-inline-block align-top`}
-                alt="logo"
-              />
+              <Nav.Link>
+                <img
+                  src={logo}
+                  className={`${css.logoView} d-inline-block align-top`}
+                  alt="logo"
+                />
+              </Nav.Link>
             )}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
