@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Layout from "../../components/CustomLayout/Layout";
 
 function Abouts() {
-  return <div>Abouts</div>;
+  return <Layout></Layout>;
 }
 
 export default Abouts;
