@@ -1,16 +1,15 @@
 .navBarView {
-  background-color: #818181;
+  background-color: #c6c6c6;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.06);
   z-index: 20;
 }
-
 .logoView {
   height: 50px;
 }
 
 .offcanvasView {
   width: 300px !important;
-  background-color: #818181;
+  background-color: #959595;
 }
 
 .navLinkText {
