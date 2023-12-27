@@ -4,13 +4,13 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
-  <HashRouter>
+  <BrowserRouter>
     <App />
-  </HashRouter>
+  </BrowserRouter>
 );
 
 reportWebVitals();
