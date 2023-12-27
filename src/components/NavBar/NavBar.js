@@ -73,14 +73,6 @@ function NavBar() {
                 >
                   商店介紹
                 </Nav.Link>
-                <Nav.Link
-                  className={`${css.navLinkText} d-flex justify-content-center`}
-                  onClick={() => {
-                    navigate("/abouts");
-                  }}
-                >
-                  聯絡我們
-                </Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
