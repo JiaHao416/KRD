@@ -1,4 +1,4 @@
-import App from "App";
+import App from "../src/App";
 
 export async function getStaticPaths() {
   const pageIds = ["abouts", "all-products", "new-products"];
