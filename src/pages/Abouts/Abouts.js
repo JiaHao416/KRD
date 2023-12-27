@@ -42,11 +42,14 @@ function Abouts() {
                       className={`${css.imgView} d-inline-block align-top`}
                       alt=""
                     />
+                    <p className={`${css.contentStyle} text-center`}>
+                      {products.fields.icon_name}
+                    </p>
                   </Col>
                 ))}
             </Row>
           </div>
-          <div className={css.contentStyle}>
+          <div className={`${css.contentStyle} mt-5`}>
             地址 ： 台中市太平區宜安街31號1樓
           </div>
           <div className={css.contentStyle}>電話 ： 04-22798787</div>
