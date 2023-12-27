@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Modal } from "react-bootstrap";
 
 function ImageModal(props) {
@@ -10,7 +10,7 @@ function ImageModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
     >
       <Modal.Body>
-        <img src={props.img} width="100%" height="50%" alt="Selected Image" />
+        <img src={props.img} width="100%" height="50%" alt="" />
       </Modal.Body>
 
       <Modal.Footer className="border-0"></Modal.Footer>

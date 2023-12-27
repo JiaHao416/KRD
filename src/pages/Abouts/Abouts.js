@@ -40,6 +40,7 @@ function Abouts() {
                     <img
                       src={products.fields.img_url}
                       className={`${css.imgView} d-inline-block align-top`}
+                      alt=""
                     />
                     <p className={`${css.contentStyle} text-center`}>
                       {products.fields.icon_name}

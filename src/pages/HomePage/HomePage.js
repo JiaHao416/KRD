@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import css from "./homepage.module.css";
-import { useNavigate, useParams } from "react-router-dom";
 import Layout from "../../components/CustomLayout/Layout";
 import { airTable } from "../../services/AirTable";
 import { Carousel } from "react-bootstrap";
 
 function Home() {
-  let { id } = useParams();
   const [hotProduct1, setHotProduct1] = useState([]);
   const [hotProduct2, setHotProduct2] = useState([]);
 
@@ -41,7 +39,7 @@ function Home() {
             <div
               className={`w-100 d-flex row justify-content-center bg-dark m-0`}
             >
-              <img className={`w-50`} src={product.fields.img_url} />
+              <img className={`w-50`} src={product.fields.img_url} alt="" />
             </div>
           </Carousel.Item>
         ))}

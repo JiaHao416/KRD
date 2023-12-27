@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import css from "./sidemenu.module.css";
 import { useNavigate } from "react-router-dom";
-import { ButtonGroup, Button, Nav } from "react-bootstrap";
+import { ButtonGroup, Nav } from "react-bootstrap";
 import { airTable } from "../../services/AirTable";
 
 function SideMenu(props) {
