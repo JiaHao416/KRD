@@ -50,7 +50,7 @@ function Abouts() {
             </Row>
           </div>
           <div className={`${css.contentStyle} mt-5`}>
-            地址 ： 台中市太平區宜安街31號1樓
+            地址 ： 台中市太平區永平路320之1號
           </div>
           <div className={css.contentStyle}>電話 ： 04-22798787</div>
         </div>
