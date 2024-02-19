@@ -14,7 +14,7 @@ function Footer() {
             className={`${css.informationView} d-flex row justify-content-center align-items-center mt-2 mb-5`}
           >
             <div className={css.contentStyle}>
-              地址 / 411 台中市太平區宜安街31號1樓
+              地址 / 411 台中市太平區永平路320之1號
             </div>
             <div className={css.contentStyle}>電話 / (04) 22798787</div>
             <div className={css.contentStyle}>
